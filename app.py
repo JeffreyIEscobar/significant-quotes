@@ -1,11 +1,12 @@
 import random
 from flask import Flask, render_template, jsonify
 
-app = Flask(__name__, template_folder="templates", static_folder="static")
-
 # Load quotes with authors from a file
 with open("quotes.txt", "r") as file:
     quotes = [line.strip() for line in file]
+
+# Flask web app to serve the HTML
+app = Flask(__name__, template_folder="templates", static_folder="static")
 
 # Function to get a random quote and author
 def get_random_quote_with_author():
@@ -23,4 +24,5 @@ def get_quote():
     return jsonify({"quote": quote, "author": author})
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.debug = True  # Enable debug mode
+    app.run()

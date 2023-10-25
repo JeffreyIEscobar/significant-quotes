@@ -1,23 +1,33 @@
 body {
-    font-family: Arial, sans-serif;
-    text-align: center;
+    font-family: 'Arial', sans-serif;
     background-color: #f7f7f7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    text-align: center;
 }
 
 .quote-container {
     background-color: #fff;
     border-radius: 10px;
     padding: 20px;
-    width: 60%;
-    margin: 10% auto;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    text-align: center;
+    margin: 20px;
+    display: inline-block;
+}
+
+.quote {
+    margin-bottom: 20px;
 }
 
 .quote-text {
     font-size: 24px;
-    margin-bottom: 20px;
-    font-weight: bold; 
+    font-weight: bold;
 }
 
 .author {
@@ -26,8 +36,8 @@ body {
     margin-top: 10px;
 }
 
-.new-quote-button {
-    background-color: #4CAF50;
+.generate-button {
+    background-color: #007BFF;
     color: #fff;
     border: none;
     padding: 10px 20px;
@@ -38,6 +48,6 @@ body {
     margin-top: 10px;
 }
 
-.new-quote-button:hover {
-    background-color: #45a049;
+.generate-button:hover {
+    background-color: #0056b3;
 }
